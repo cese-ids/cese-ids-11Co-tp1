@@ -1,3 +1,4 @@
+
 /*=====[Module Name]===========================================================
  * Copyright 2019 Esteban Daniel VOLENTINI <evolentini@gmail.com>
  * All rights reserved.
@@ -25,8 +26,16 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
-const alumno_t ALUMNOS[] = {
-};
+    static const struct alumno_s FELIPE_SARCHE = {
+        .apellidos = "SARCHE",
+        .nombres = "Felipe Esteban",
+        .documento = "1719595744",
+    };
+
+    const alumno_t ALUMNOS[] = {
+        &FELIPE_SARCHE,
+    };
+
 
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
@@ -71,5 +80,8 @@ bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], 
     snprintf(&cadena[posicion] - 5, espacio - posicion + 5, "\r\n]");
     return resultado;
 }
+
+
+    
 
 /*=====[Implementations of private functions]================================*/
