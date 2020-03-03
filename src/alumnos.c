@@ -46,4 +46,14 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     return (resultado >= 0);
 }
 
+bool JoseDanielLopez(char * cadena, size_t espacio) {
+	struct alumno_s alumno = {
+		.apellidos = "LÓPEZ",
+		.nombres = "José Daniel",
+		.documento = "20.010.452",
+	};
+
+	SerializarAlumno(cadena, espacio, &alumno);
+}
+
 /*=====[Implementations of private functions]================================*/
