@@ -54,9 +54,9 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
 
 bool FelipeSarche(char * cadena, size_t espacio) {
     static const struct alumno_s ALUMNO = {
-        .apellidos = "SARCHE",
+        .apellidos = "SARCHE CARRION",
         .nombres = "Felipe Esteban",
-        .documento = "1719595744",
+        .documento = "171959",
     };
     return SerializarAlumno(cadena, espacio, &ALUMNO);
 }
