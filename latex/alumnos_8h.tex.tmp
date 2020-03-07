@@ -1,0 +1,95 @@
+\hypertarget{alumnos_8h}{}\section{inc/alumnos.h File Reference}
+\label{alumnos_8h}\index{inc/alumnos.\+h@{inc/alumnos.\+h}}
+
+
+archivo donde se declaran prototipo de funciones para manejar los datos dele alumno  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for alumnos.\+h\+:
+% FIG 0
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structalumno__s}{alumno\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Estructura que guarda los datos de un alumno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}\label{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}} 
+typedef struct \hyperlink{structalumno__s}{alumno\+\_\+s} $\ast$ \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Estructura que guarda los datos de un alumno. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{alumnos_8h_a94d19b92fc92e35f30662e321356326a}{Serializar\+Alumno} (char $\ast$cadena, size\+\_\+t espacio, const \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t} alumno)
+\begin{DoxyCompactList}\small\item\em Funcion para covertir la estructura en un string para poder imprimir. \end{DoxyCompactList}\item 
+bool \hyperlink{alumnos_8h_a04d0b9e50c126d1507f936f7d51b98f1}{Serializar\+Alumnos} (char $\ast$cadena, size\+\_\+t espacio, const \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t} alumnos\mbox{[}$\,$\mbox{]}, int cantidad)
+\begin{DoxyCompactList}\small\item\em funcion para mostrar a todos los datos del array de alumnos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{alumnos_8h_ac069805169418a8efebf22c025e195c5}\label{alumnos_8h_ac069805169418a8efebf22c025e195c5}} 
+const \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t} {\bfseries A\+L\+U\+M\+N\+OS} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{alumnos_8h_a3e0b22baac6dc7d0cf8e13559d500ba8}\label{alumnos_8h_a3e0b22baac6dc7d0cf8e13559d500ba8}} 
+const int {\bfseries C\+A\+N\+T\+I\+D\+A\+D\+\_\+\+A\+L\+U\+M\+N\+OS}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+archivo donde se declaran prototipo de funciones para manejar los datos dele alumno 
+
+\begin{DoxyVersion}{Version}
+1.\+0.\+0 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{alumnos_8h_a94d19b92fc92e35f30662e321356326a}\label{alumnos_8h_a94d19b92fc92e35f30662e321356326a}} 
+\index{alumnos.\+h@{alumnos.\+h}!Serializar\+Alumno@{Serializar\+Alumno}}
+\index{Serializar\+Alumno@{Serializar\+Alumno}!alumnos.\+h@{alumnos.\+h}}
+\subsubsection{\texorpdfstring{Serializar\+Alumno()}{SerializarAlumno()}}
+{\footnotesize\ttfamily bool Serializar\+Alumno (\begin{DoxyParamCaption}\item[{char $\ast$}]{cadena,  }\item[{size\+\_\+t}]{espacio,  }\item[{const \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t}}]{alumno }\end{DoxyParamCaption})}
+
+
+
+Funcion para covertir la estructura en un string para poder imprimir. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cadena} & se usa para almacenar cadenas de caracteres \\
+\hline
+{\em espacio} & seginacion de espacio para la cedena de caracteres \\
+\hline
+{\em alumno} & datos de alumno \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna true cuando se logra imprimir los datos del alumno 
+\end{DoxyReturn}
+\mbox{\Hypertarget{alumnos_8h_a04d0b9e50c126d1507f936f7d51b98f1}\label{alumnos_8h_a04d0b9e50c126d1507f936f7d51b98f1}} 
+\index{alumnos.\+h@{alumnos.\+h}!Serializar\+Alumnos@{Serializar\+Alumnos}}
+\index{Serializar\+Alumnos@{Serializar\+Alumnos}!alumnos.\+h@{alumnos.\+h}}
+\subsubsection{\texorpdfstring{Serializar\+Alumnos()}{SerializarAlumnos()}}
+{\footnotesize\ttfamily bool Serializar\+Alumnos (\begin{DoxyParamCaption}\item[{char $\ast$}]{cadena,  }\item[{size\+\_\+t}]{espacio,  }\item[{const \hyperlink{alumnos_8h_a7ecf0f1c2bcbe176c4728702b992994e}{alumno\+\_\+t}}]{alumnos\mbox{[}$\,$\mbox{]},  }\item[{int}]{cantidad }\end{DoxyParamCaption})}
+
+
+
+funcion para mostrar a todos los datos del array de alumnos 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cadena} & se usa para almacenar caracteres \\
+\hline
+{\em espacio} & seginacion de espacio para la cedena de caracteres \\
+\hline
+{\em alumnos} & datos de alumno \\
+\hline
+{\em cantidad} & determina cantidad de elementos en la cadena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna true cuando se logra imprimir los datos del alumno 
+\end{DoxyReturn}
