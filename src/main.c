@@ -35,7 +35,8 @@
 /*=====[Implementations of private functions]================================*/
 
 int main(int argc, char *argv[]) {
-	char cadena[128];//pueden ser llaves o corchetes, aunque es un vector...
+
+	char cadena[128];
 	
 	if (KevinMoncayo(cadena, sizeof(cadena))){
 	printf("Alumno: %s\r\n", cadena);
@@ -43,6 +44,73 @@ int main(int argc, char *argv[]) {
 	else{
 	printf("No se pudo serializar el alumno.\r\n");
 	}
-	return 0;
+
+    if (JoseMauricioLara(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+
+    if (DanielMarquez(cadena, sizeof(cadena)))
+    {
+	printf("Alumno: %s\r\n", cadena);
+    }else {
+	printf("No se pudo serializar el alumno\r\n");
+    }
+
+
+    if (FedericoPacher(cadena, sizeof(cadena)))
+    {
+	printf("Alumno: %s\r\n", cadena);
+    }else {
+	printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if(FelipeSarche(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);       
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+
+    if(HanesSciarrone(cadena, sizeof(cadena))) {
+	printf("Alumno: %s\r\n", cadena);	
+    } else {
+	printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if (AlejandroPermingeat(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    }
+    else {
+	 printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if (RaulCamacho(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if (JoseDanielLopez(cadena, sizeof(cadena))) {
+    	printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if (AlejandroPermingeat(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if (EstebanVolentini(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar el alumno\r\n");
+    }
+
+    return 0;
 }
 
