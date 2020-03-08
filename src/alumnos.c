@@ -1,4 +1,5 @@
 
+
 /*=====[Module Name]===========================================================
  * Copyright 2019 Esteban Daniel VOLENTINI <evolentini@gmail.com>
  * All rights reserved.
@@ -26,10 +27,13 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
+
+   /*! Estructura alumno_s */
+
     static const struct alumno_s FELIPE_SARCHE = {
-        .apellidos = "SARCHE",
-        .nombres = "Felipe Esteban",
-        .documento = "1719595744",
+        .apellidos = "SARCHE",   /*! APELLIDO DEL ALUMNO */
+        .nombres = "Felipe Esteban",   /*! NOMBRE DEL ALUMNO */
+        .documento = "1719595744",   /*! DOCUMENTO DE IDENTIDAD */
     };
 
     const alumno_t ALUMNOS[] = {
