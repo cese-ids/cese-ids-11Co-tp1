@@ -35,6 +35,7 @@
 /*=====[Implementations of private functions]================================*/
 
 int main(int argc, char *argv[]) {
+<<<<<<< HEAD
 
 	char cadena[128];
 	
@@ -109,6 +110,12 @@ int main(int argc, char *argv[]) {
         printf("Alumno: %s\r\n", cadena);
     } else {
         printf("No se pudo serializar el alumno\r\n");
+    }
+
+    if(FredsAmundaray(cadena, sizeof(cadena))){
+       printf("Alumno: %s\r\n", cadena);
+    }else{
+	printf("No se puede Serializar el Alumno\r\n");	
     }
 
     return 0;
