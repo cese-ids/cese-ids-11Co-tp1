@@ -29,22 +29,42 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+//! Estructura de datos del alumnos
 typedef struct alumno_s {
-    char apellidos[30];
-    char nombres[30];
-    char documento[11];
+    char apellidos[30];	//!<Vercor de caracteres que contiene el apellido
+    char nombres[30];	//!< Vercor de caracteres que contiene el nombre completo
+    char documento[11]; //!< Vercor de caracteres que contiene el número de documento 
 } const * alumno_t;
 
 /*=====[Definitions of public global variables]==============================*/
 
-extern const alumno_t ALUMNOS[];
+extern const alumno_t ALUMNOS[]; /*!< Listado de los alumnos con sus datos */
 
-extern const int CANTIDAD_ALUMNOS;
+
+extern const int CANTIDAD_ALUMNOS; /*!< Variable que indica la cantidad de alumnos */
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/*! \brief Función para completar un JSON con los datos del alumno
+ *
+ * \param[in,out] cadena: Cadena de caracteres que contendra el JJSON cargado
+ * \param[in] 	  espacio: Tamaño de la cadena de caracteres disponible 
+ * \param[in] 	  alumno: estructuta tipo alumno_t que contiene todos los datos que tendra el JSON
+ *
+ * \return Retorna TRUE si se pudo completar el JSON, de lo controría devuelve FALSE
+ */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/*! \brief Función para recorre todo el listado de alumnos y
+ *  completar en una lista de JSON con los datos de cada alumno
+ *
+ * \param[in,out] cadena: Vector de caracteres que contendra el JSON cargado
+ * \param[in]     espacio: Tamaño de la cadena de caracteres disponible 
+ * \param[in] 	  alumnos[]: Vector de  estructuta tipo alumno_t que contiene todos los alumnos del curso con sus datos
+ * \param[in] 	  cantidad: Cantidad de alumnos que hay en el curso
+ *
+ * \return Retorna TRUE si se pudo completar el JSON, de lo controría devuelve FALSE
+ */
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/

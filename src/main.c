@@ -34,6 +34,7 @@
 
 /*=====[Implementations of private functions]================================*/
 
+//! Hilo principal del programa que imprime por consola todo el listado de alumnos con sus datos
 int main(int argc, char *argv[]) {
     char cadena[256];
 
