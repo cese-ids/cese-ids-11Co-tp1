@@ -72,18 +72,10 @@ int main(int argc, char *argv[]) {
         printf("No se pudo serializar el alumno\r\n");
     }
 
-
-    if(HanesSciarrone(cadena, sizeof(cadena))) {
-	printf("Alumno: %s\r\n", cadena);	
+    if (HanesSciarrone(cadena, sizeof(cadena))) {
+    	printf("Alumno: %s\r\n", cadena);
     } else {
-	printf("No se pudo serializar el alumno\r\n");
-    }
-
-    if (AlejandroPermingeat(cadena, sizeof(cadena))) {
-        printf("Alumno: %s\r\n", cadena);
-    }
-    else {
-	 printf("No se pudo serializar el alumno\r\n");
+    	printf("No se pudo serializar el alumno\r\n");
     }
 
     if (RaulCamacho(cadena, sizeof(cadena))) {

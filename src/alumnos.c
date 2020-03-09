@@ -55,10 +55,6 @@ bool JoseMauricioLara(char * cadena, size_t espacio) {
     return SerializarAlumno(cadena, espacio, &ALUMNO);
 }
 
-
-
-
-
 bool FelipeSarche(char * cadena, size_t espacio) {
     static const struct alumno_s ALUMNO = {
         .apellidos = "SARCHE CARRION",
@@ -67,10 +63,6 @@ bool FelipeSarche(char * cadena, size_t espacio) {
     };
     return SerializarAlumno(cadena, espacio, &ALUMNO);
 }
-
-
-
-
 
 bool RaulCamacho(char * cadena, size_t espacio) {
     static const struct alumno_s ALUMNO = {
@@ -141,8 +133,6 @@ bool FedericoPacher(char * cadena, size_t espacio) {
 
     return SerializarAlumno(cadena, espacio, &ALUMNO);
 }
-
-
 
 bool DanielMarquez(char * cadena, size_t espacio) {
     struct alumno_s ALUMNO = {
