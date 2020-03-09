@@ -47,3 +47,12 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
 }
 
 /*=====[Implementations of private functions]================================*/
+
+bool CarlosGermanCarrenoRomano(char* cadena, size_t espacio, const alumno_t alumno){
+	struct alumno_s alumno = {
+		.apellidos = "CARRENO ROMANO",
+		.nombres = "Carlos German",
+		.documento = "32342193",
+	};
+}
+
