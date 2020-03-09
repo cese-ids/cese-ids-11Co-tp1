@@ -148,7 +148,7 @@ bool KevinMoncayo(char * cadena, size_t espacio) {
     static const struct alumno_s ALUMNO = {
         .apellidos = "MONCAYO",
         .nombres = "Jorge Kevin",
-        .documento = "1.085.298.019",
+        .documento = "1.85.298.19",
     };
 
     return SerializarAlumno(cadena, espacio, &ALUMNO);
