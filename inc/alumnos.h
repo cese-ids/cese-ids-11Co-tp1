@@ -9,10 +9,11 @@
 
 /*=====[Avoid multiple inclusion - begin]====================================*/
 
+
 /**
- *@file alumnos.h
- *@version 1.0.0
- *@brief header file alumnos
+ *@file  alumnos.h
+ *@version 1.0.1
+ *@brief header file alumnos.h
  */
 
 #ifndef _ALUMNOS_H_
@@ -51,7 +52,7 @@ extern const int CANTIDAD_ALUMNOS;
 
 
 /**
- * @brief FUNCION QUE IMPRIME DATOS BÁSICOS DE UN ALUMNO EN PARTICULAR
+ * @brief Funcion que imprime datos de un solo alumno
  * 
  * @param[in]  cadena      Puntero a espacio de memoria a desplegar en texto
  * @param[in]  espacio     Numero de caracteres 
@@ -62,7 +63,8 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
 
 /**
- * @brief FUNCION QUE IMPRIME DATOS BÁSICOS DE VARIOS ALUMNOS 
+ * @brief  Funcion que imprime datos de varios alumnos
+ *
  * 
  * @param[in]  cadena      Puntero a espacio de memoria a desplegar en texto
  * @param[in]  espacio     Numero de caracteres 
