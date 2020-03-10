@@ -82,7 +82,7 @@ bool RaulCamacho(char * cadena, size_t espacio) {
         .documento = "75.656.530",
         };
 
-	SerializarAlumno(cadena, espacio, &ALUMNO);
+	return SerializarAlumno(cadena, espacio, &ALUMNO);
 }
 
 bool JoseDanielLopez(char * cadena, size_t espacio) {
