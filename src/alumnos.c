@@ -6,6 +6,12 @@
  * Version: 0.1.0
  * Creation Date: 2019/03/01
  */
+
+/** @file alumnos.c
+ ** @brief Archivo de datos de los alumnos.
+ ** @addtogroup Alumnos
+ ** @{ */
+ 
  
 /*=====[Inclusion of own header]=============================================*/
 
@@ -24,17 +30,26 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
+
+/**
+ * @brief Estructura de datos del alumno
+ */
 static const struct alumno_s LUCAS_MONZONLANGUASCO = {
-        .apellidos = "MONZON LANGUASCO",
-        .nombres = "Lucas Fabricio",
-        .documento = "38.876.668",
-    };
+        .apellidos = "MONZON LANGUASCO",  
+        .nombres = "Lucas Fabricio",	  
+        .documento = "38.876.668",        
+    }; 
 
-
+/**
+ * @brief Alumnos
+ */
 const alumno_t ALUMNOS[] = {
 	&LUCAS_MONZONLANGUASCO,
 };
 
+/**
+ * @brief Cantidad de Alumnos 
+ */
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
@@ -44,6 +59,8 @@ const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 /*=====[Implementations of public functions]=================================*/
 
 /*=====[Implementations of interrupt functions]==============================*/
+
+///Implementación de funcion para recopilar datos de alumnos.
 
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
     int resultado;
@@ -58,6 +75,8 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
 
     return (resultado >= 0);
 }
+
+
 
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad) {
     int posicion = snprintf(cadena, espacio, "[\r\n  ");
@@ -79,4 +98,7 @@ bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], 
     return resultado;
 }
 
+
 /*=====[Implementations of private functions]================================*/
+
+/**  @} Final de la definicion del modulo para doxygen */

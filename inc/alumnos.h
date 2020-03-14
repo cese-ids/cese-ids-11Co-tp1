@@ -7,9 +7,15 @@
  * Creation Date: 2019/03/01
  */
 
+/** @file alumnos.h
+ ** @brief Archivo de datos de los alumnos.
+ ** @addtogroup Alumnos
+ ** @{ */
+
 /*=====[Avoid multiple inclusion - begin]====================================*/
 
 #ifndef _ALUMNOS_H_
+
 #define _ALUMNOS_H_
 
 /*=====[Inclusions of public function dependencies]==========================*/
@@ -29,19 +35,24 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+//! Definicion de la estructura de alumnos
 typedef struct alumno_s {
-    char apellidos[30];
-    char nombres[30];
-    char documento[11];
+    char apellidos[30];  //!< Apellidos
+    char nombres[30];    //!< Nombrers
+    char documento[11];  //!< Documento de Identidad
 } const * alumno_t;
 
 /*=====[Definitions of public global variables]==============================*/
 
+
 extern const alumno_t ALUMNOS[];
+
 
 extern const int CANTIDAD_ALUMNOS;
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
+
+//! Declaración de prototipos de función
 
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
