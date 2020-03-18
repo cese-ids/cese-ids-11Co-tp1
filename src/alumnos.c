@@ -7,6 +7,16 @@
  * Creation Date: 2019/03/01
  */
  
+/** @file alumnos.c
+ ** @brief Implementación de las funciones que serializan los alumnos
+ **
+ **| REV | YYYY.MM.DD | Autor           | Descripción de los cambios                              |
+ **|-----|------------|-----------------|---------------------------------------------------------|
+ **|   1 | 2020.03.17 | Vittori         | Version inicial del archivo Alumnos		          |
+ **
+ ** @addtogroup indices
+ ** @{ *
+
 /*=====[Inclusion of own header]=============================================*/
 
 #include "alumnos.h"
@@ -25,16 +35,19 @@
 
 /*=====[Definitions of public global variables]==============================*/
 
+//! Estructura rellana con los datos del alumno Vittori
 static const struct alumno_s LUCIANO_VITTORI = {
-    .apellidos = "VITTORI",
-    .nombres = "Luciano Francisco",
-    .documento = "35.440.774",
+    .apellidos = "VITTORI",		//!< Apellido
+    .nombres = "Luciano Francisco",	//!< Nombres
+    .documento = "35.440.774",		//!< DNI
 };
 
+//! Array con todos los alumnos cargados
 const alumno_t ALUMNOS[] = {
     &LUCIANO_VITTORI,
 };
 
+//! Variable constante para declarar la cantidad de alumnos cargados en el array ALUMNOS
 const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
@@ -78,5 +91,8 @@ bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], 
     snprintf(&cadena[posicion] - 5, espacio - posicion + 5, "\r\n]");
     return resultado;
 }
+
+
+/** @} Final de la definición del modulo para doxygen */
 
 /*=====[Implementations of private functions]================================*/
