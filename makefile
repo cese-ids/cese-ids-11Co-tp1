@@ -2,6 +2,7 @@ SRC_DIR = ./src
 INC_DIR = ./inc
 OBJ_DIR = ./build/obj
 BIN_DIR = ./build
+DOC_DIR = ./doc
 
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
 OBJ_FILES = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC_FILES))
@@ -14,8 +15,12 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@echo Compiling source file $(notdir $(basename $<))
 	@gcc -c $< -I$(INC_DIR) -o $@
 
-doc:
+doc: cleandoc
+	@export DOC_DIR=$(DOC_DIR)
 	@doxygen doxyfile
+
+cleandoc:
+	@rm -rf DOC_DIR
 ###############################################################################
 # Creation of output folders
 build_folders: $(BIN_DIR) $(LIB_DIR) $(OBJ_DIR) $(DOC_DIR) $(DPN_DIR) $(RST_DIR)
