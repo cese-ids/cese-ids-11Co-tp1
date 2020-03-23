@@ -29,6 +29,7 @@ extern "C" {
 
 /*=====[Definitions of public data types]====================================*/
 
+//! Estructura para guardar los datos del alumno
 typedef struct alumno_s {
     char apellidos[30];
     char nombres[30];
@@ -37,14 +38,31 @@ typedef struct alumno_s {
 
 /*=====[Definitions of public global variables]==============================*/
 
+//! Arreglo de tipo alumno_t para almaceran la lista de alumnos
 extern const alumno_t ALUMNOS[];
 
+//! Cantidad de alumnos
 extern const int CANTIDAD_ALUMNOS;
 
 /*=====[Prototypes (declarations) of public functions]=======================*/
 
+/**
+ * @brief Funcion para serializar cada alumno a JSON
+ * @param cadena Cadena de caracteres donde se guardara el alumno serializado
+ * @param espacio Tamaño de la cadena de caracteres
+ * @param alumno Alumno que se requiere serializar
+ * @return true si se pude serializar
+ */
 bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
+/**
+ * @brief Funcion para serializar cierta cantidad de alunmos a JSON
+ * @param cadena Cadena de caracteres donde se guardara JSON con todos los alumnos
+ * @param espacio Tamaño de la cadena de caracteres
+ * @param alumnos Arreglo de alumnos que se requiere serializar
+ * @param cantidad Cantidad de alumnos que se quieren serializar
+ * @return true si se pude serializar
+ */
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad);
 
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/
