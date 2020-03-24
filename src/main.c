@@ -35,5 +35,13 @@
 /*=====[Implementations of private functions]================================*/
 
 int main(int argc, char *argv[]) {
+    char cadena[128];
+
+    if (JorgeMunoz(cadena, sizeof(cadena))) {
+        printf("Alumno: %s\r\n", cadena);
+    } else {
+        printf("No se pudo serializar alumno\r\n");
+    }
+    
     return 0;
 }
