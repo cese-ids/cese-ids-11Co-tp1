@@ -42,8 +42,6 @@ int main(int argc, char *argv[]) {
     } else {
         printf("No se pudo serializar alumno\r\n");
 
-	char cadena[128];
-	
 	if (KevinMoncayo(cadena, sizeof(cadena))){
 	printf("Alumno: %s\r\n", cadena);
 	}
