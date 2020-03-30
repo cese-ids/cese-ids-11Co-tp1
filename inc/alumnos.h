@@ -39,7 +39,7 @@ extern "C" {
 typedef struct alumno_s {
     char apellidos[30];
     char nombres[30];
-    char documento[13];
+    char documento[11];
 } const * alumno_t;
 
 /*=====[Definitions of public global variables]==============================*/
