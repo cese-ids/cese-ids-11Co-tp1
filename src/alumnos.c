@@ -84,7 +84,14 @@ static const struct alumno_s RAUL_CAMACHO = {
         .documento = "75.656.530",
     };
 
+static const struct alumno_s DANIEL_MARQUEZ = {
+        .apellidos = "MARQUEZ FARIAS",
+        .nombres = "Daniel Alexander",
+        .documento = "95.956.478",
+    };
+
 const alumno_t ALUMNOS[] = {
+    &DANIEL_MARQUEZ,
     &RAUL_CAMACHO,
     &DAVID_BROIN,
     &MUNOZ_JORGE,
