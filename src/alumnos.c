@@ -66,12 +66,6 @@ static const struct alumno_s FREDS_AMUNDARAY = {
     .documento = "95.843.832",
 };
 
-static const struct alumno_s LUCIANO_VITTORI = {
-    .apellidos = "VITTORI",
-    .nombres = "Luciano Francisco",
-    .documento = "35.440.774",
-};
-
 static const struct alumno_s MUNOZ_JORGE = {
       .apellidos = "MUÑOZ",
       .nombres = "Jorge Salvador",
@@ -90,18 +84,24 @@ static const struct alumno_s DANIEL_MARQUEZ = {
         .documento = "95.956.478",
     };
 
+static const struct alumno_s LUCIANO_VITTORI = {
+    .apellidos = "VITTORI",
+    .nombres = "Luciano Francisco",
+    .documento = "35440774",
+};
+
 const alumno_t ALUMNOS[] = {
     &DANIEL_MARQUEZ,
     &RAUL_CAMACHO,
     &DAVID_BROIN,
     &MUNOZ_JORGE,
-    &LUCIANO_VITTORI,
     &LUCAS_MONZONLANGUASCO,
     &KEVIN_MONCAYO,
     &ESTEBAN_VOLENTINI,
     &HANES_SCIARRONE,
     &JOSE_LOPEZ,
-    &FREDS_AMUNDARAY,  
+    &FREDS_AMUNDARAY,
+    &LUCIANO_VITTORI,
 };
 
 
