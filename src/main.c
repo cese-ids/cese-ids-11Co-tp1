@@ -42,5 +42,6 @@ int main(int argc, char *argv[]) {
     } else {
         printf("No se pudo serializar un alumno\r\n");
     }
+
     return 0;
 }
