@@ -31,9 +31,6 @@ struct alumno_s CARLOS_GERMAN_CARRENO_ROMANO = {
     .documento = "32342193",
 };
 
-const alumno_t ALUMNOS[] = {
-	&CARLOS_GERMAN_CARRENO_ROMANO,
-=======
 static const struct alumno_s DAVID_BROIN = {
     .apellidos = "BROIN",
     .nombres = "David Mauricio",
@@ -112,7 +109,7 @@ const alumno_t ALUMNOS[] = {
     &JOSE_LOPEZ,
     &FREDS_AMUNDARAY,
     &LUCIANO_VITTORI,
-
+    &CARLOS_GERMAN_CARRENO_ROMANO,
 };
 
 
