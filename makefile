@@ -30,6 +30,3 @@ $(OBJ_DIR): $(OUT_DIR)
 	@echo Creating output objects folder
 	@mkdir $(OBJ_DIR)
 ##############################################################################
-# Doxygen automatic documentation
-doc:
-	@doxygen
