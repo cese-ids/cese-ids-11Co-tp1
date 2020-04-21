@@ -11,6 +11,7 @@
 
 #include "alumnos.h"
 #include <stdio.h>
+#include <string.h>
 
 /*=====[Inclusions of private function dependencies]=========================*/
 
@@ -23,6 +24,52 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
+static const struct alumno_s LUCAS_MONZONLANGUASCO = {
+    .apellidos = "MONZON LANGUASCO",
+    .nombres = "Lucas Fabricio",
+    .documento = "38.876.668",
+};
+
+static const struct alumno_s KEVIN_MONCAYO = {
+    .apellidos = "MONCAYO MUÑOZ",
+    .nombres = "Jorge Kevin",
+    .documento = "1.085.298.019",
+};
+
+static const struct alumno_s ESTEBAN_VOLENTINI = {
+    .apellidos = "VOLENTINI",
+    .nombres = "Esteban Daniel",
+    .documento = "23.517.968",
+};
+
+static const struct alumno_s HANES_SCIARRONE = {
+    .apellidos = "SCIARRONE",
+    .nombres = "Hanes Nahuel",
+    .documento = "37.867.564",
+};
+
+static const struct alumno_s JOSE_LOPEZ = {
+    .apellidos = "LOPEZ",
+    .nombres = "José Daniel",
+    .documento = "20.010.452",
+};
+
+static const struct alumno_s FREDS_AMUNDARAY = {
+    .apellidos = "AMUNDARAY CRUZ",
+    .nombres = "Freds Argilio",
+    .documento = "95.843.832",
+};
+
+const alumno_t ALUMNOS[] = {
+    &LUCAS_MONZONLANGUASCO,
+    &KEVIN_MONCAYO,
+    &ESTEBAN_VOLENTINI,
+    &HANES_SCIARRONE,
+    &JOSE_LOPEZ,
+    &FREDS_AMUNDARAY,  
+};
+
+const int CANTIDAD_ALUMNOS = (sizeof(ALUMNOS) / sizeof(alumno_t));
 
 /*=====[Definitions of private global variables]=============================*/
 
@@ -44,6 +91,26 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno) {
              alumno->documento, alumno->apellidos, alumno->nombres);
 
     return (resultado >= 0);
+}
+
+bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad) {
+    int posicion = snprintf(cadena, espacio, "[\r\n  ");
+    bool resultado = (posicion > 0);
+
+    if (resultado){
+        for(int indice = 0; indice < cantidad; indice++ ) {
+            resultado = SerializarAlumno(&cadena[posicion], espacio - posicion, alumnos[indice]);
+            if (resultado) {
+                posicion += strlen(&cadena[posicion]);
+                posicion += snprintf(&cadena[posicion], espacio - posicion, ",\r\n  ");
+            } else {
+                break;
+            }
+        }
+    }
+
+    snprintf(&cadena[posicion] - 5, espacio - posicion + 5, "\r\n]");
+    return resultado;
 }
 
 /*=====[Implementations of private functions]================================*/
