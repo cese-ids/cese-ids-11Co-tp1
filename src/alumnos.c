@@ -24,6 +24,13 @@
 /*=====[Definitions of external public global variables]=====================*/
 
 /*=====[Definitions of public global variables]==============================*/
+
+struct alumno_s CARLOS_GERMAN_CARRENO_ROMANO = {
+    .apellidos = "CARRENO ROMANO",
+    .nombres = "Carlos German",
+    .documento = "32342193",
+};
+
 static const struct alumno_s DAVID_BROIN = {
     .apellidos = "BROIN",
     .nombres = "David Mauricio",
@@ -102,6 +109,7 @@ const alumno_t ALUMNOS[] = {
     &JOSE_LOPEZ,
     &FREDS_AMUNDARAY,
     &LUCIANO_VITTORI,
+    &CARLOS_GERMAN_CARRENO_ROMANO,
 };
 
 
@@ -150,3 +158,4 @@ bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], 
 }
 
 /*=====[Implementations of private functions]================================*/
+

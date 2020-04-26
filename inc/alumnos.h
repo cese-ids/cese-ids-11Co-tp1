@@ -47,6 +47,8 @@ bool SerializarAlumno(char * cadena, size_t espacio, const alumno_t alumno);
 
 bool SerializarAlumnos(char * cadena, size_t espacio, const alumno_t alumnos[], int cantidad);
 
+bool CarlosGermanCarrenoRomano(char * cadena, size_t espacio);
+
 /*=====[Prototypes (declarations) of public interrupt functions]=============*/
 
 /*=====[C++ - end]===========================================================*/
