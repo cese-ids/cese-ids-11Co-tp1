@@ -33,9 +33,7 @@
 /*=====[Implementations of interrupt functions]==============================*/
 
 /*=====[Implementations of private functions]================================*/
-/*****************************************************************************
- * This program generates the alumni description
- *****************************************************************************/
+
 int main(int argc, char *argv[]) {
     char cadena[1024];
 
